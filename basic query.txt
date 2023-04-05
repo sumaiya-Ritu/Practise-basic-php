@@ -1,0 +1,31 @@
+SELECT * FROM student;
+
+SELECT name FROM student;
+
+SELECT name,major FROM student;
+
+SELECT student.name,student.major 
+FROM student
+ORDER BY name; -- order by default in asending 
+
+SELECT student.name,student.major 
+FROM student
+ORDER BY name DESC; -- GETTING VALUES IN DESENDING
+
+SELECT student.name,student.major,student_id
+FROM student
+ORDER BY student_id DESC; 
+
+SELECT student.name,student.major 
+FROM student
+ORDER BY student_id
+LIMIT 2;
+
+--- for getting a specific value 
+SELECT name,major 
+FROM student
+WHERE major = 'CHEMISTRY'; --- WILL RETURN THE RESULT WITH NAME AND MAJOR FOR CHEM
+
+-- <,>,<=,>=,=,<>,AND,OR logic  
+
+

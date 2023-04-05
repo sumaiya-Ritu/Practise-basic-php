@@ -1,0 +1,27 @@
+CREATE TABLE student(
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY(student_id)
+);
+
+SELECT * FROM student;
+
+INSERT INTO student(name,major) VALUES('Kate','MATHMETICS');
+INSERT INTO student(name,major) VALUES('Jack','BIO');
+INSERT INTO student(name,major) VALUES('Claire','MATHMETICS');
+INSERT INTO student(name,major) VALUES('Ian','BIO');
+INSERT INTO student(name,major) VALUES('Bonny','PHY');
+INSERT INTO student(name,major) VALUES('KATHERINE','HISORY');
+
+UPDATE student SET major ='BIOLOGY' WHERE major='BIO'; -- =equal <> not equal >greater than <less than >=greater than or eqal <=less tha no equal   these are the signs used in update/delete query.
+UPDATE student SET major = "ENGINEERING" 
+WHERE major = 'mathmetics' or major='phy';
+
+UPDATE student SET name ='PEACE' WHERE major='BIOLOGY';
+UPDATE student SET name ='HELL' WHERE major='biology';
+
+
+UPDATE student SET major ='undecided';  -- for all rows/column 
+
+DELETE FROM student WHERE name= 'kate';

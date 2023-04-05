@@ -1,0 +1,16 @@
+CREATE TABLE student(
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20) DEFAULT 'UNDECIDED',
+    PRIMARY KEY(student_id)
+);
+
+SELECT * FROM student;
+
+INSERT INTO student VALUES(1,'Kate','MATHMETICS');
+INSERT INTO student VALUES(2,'Jack','BIO');
+INSERT INTO student(student_id,name) VALUES(4,'Jack'); --not puting value for major - result gives undeided
+INSERT INTO student VALUES(3,'Claire','');
+
+
+UPDATE student SET major = 'PHY' WHERE student_id=3; 

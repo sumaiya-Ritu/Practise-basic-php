@@ -1,0 +1,20 @@
+
+
+CREATE TABLE student(
+    student_id INT,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) UNIQUE,
+    PRIMARY KEY(student_id)
+);
+
+SELECT * FROM student;
+
+INSERT INTO student VALUES(1,'Kate','MATHMETICS');
+INSERT INTO student VALUES(2,'Jack','BIO');
+
+--INSERT INTO student VALUES(3,NULL,'CHEM'); > WILL GIVE ERROR DUE TO MY CODE STATES NAME CAN'T BE NULL
+INSERT INTO student VALUES(4,'Jack','PHY');
+INSERT INTO student VALUES(3,'Claire','PHY');>  WILL GIVE ERROR DUE TO MY CODE STATES major has to be unique
+
+
+UPDATE student SET major = 'PHY' WHERE student_id=4; 
